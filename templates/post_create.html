@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>New Post</h1>
+
+<!-- {% is template language (django language) -->
+<form action="" method="post" enctype="multipart/form-data">  <!--image compression format-->
+    {% csrf_token %}  <!--protect the form-->
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Delete Post</h1>
+
+<!-- {% is template language (django language) -->
+<form action="" method="post" enctype="multipart/form-data">  <!--image compression format-->
+    {% csrf_token %}  <!--protect the form-->
+    <p> Do you want to delete "{{post.title}}" ? </p>
+    <button type="submit">Delete</button>
+</form>
+
+{% endblock content %}
